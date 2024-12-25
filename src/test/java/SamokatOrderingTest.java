@@ -1,6 +1,6 @@
-import pageObjects.MainPage;
-import pageObjects.OrderPage;
-import pageObjects.RentPage;
+import ru.page.objects.MainPage;
+import ru.page.objects.OrderPage;
+import ru.page.objects.RentPage;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -42,18 +42,18 @@ public class SamokatOrderingTest extends CommonBaseTest {
                 .clickMiddleOrderButton();
 
         new OrderPage(driver)
-                .sendClientFirstName("Геральт")
-                .sendClientLastName("Ривийский")
-                .sendDeliveryAddress("Москва, Амурская, 1")
-                .selectMetroStation("Черкизовская")
-                .sendDeliveryClientPhoneNumber("89991234567")
+                .sendClientFirstName("Золтан")
+                .sendClientLastName("Хивай")
+                .sendDeliveryAddress("Москва, Хлобыстова, 18")
+                .selectMetroStation("Выхино")
+                .sendDeliveryClientPhoneNumber("89997654321")
                 .clickNextButton();
 
         boolean isDisplayed = new RentPage(driver)
                 .sendRentalDate("07.01.2025")
                 .setRentalTime()
                 .clickCheckBoxColourGreyDespair()
-                .sendComment("И колоду для гвинта возьмите")
+                .sendComment("Сом король Понтара")
                 .clickOrderButton()
                 .clickOrderButtonYes()
                 .isModalOrderWindowDisplayed();

@@ -14,14 +14,10 @@ public class CommonBaseTest {
     //Выбор браузера для прогона тестов_
     @Before
     public void setUp() {
+        //Закомментировать нужное - Chrome или Firefox
         //ChromeOptions options = new ChromeOptions();
-        //options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
-        //WebDriverManager.chromedriver().setup();
         //driver = new ChromeDriver(options);
-
         FirefoxOptions options = new FirefoxOptions();
-        //options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
-        //WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver(options);
 
         driver.manage().window().maximize();

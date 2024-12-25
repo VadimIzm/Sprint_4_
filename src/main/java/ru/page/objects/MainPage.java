@@ -1,4 +1,4 @@
-package pageObjects;
+package ru.page.objects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -47,7 +47,6 @@ public class MainPage {
             "accordion__panel-5",
             "accordion__panel-6",
             "accordion__panel-7"};
-
     //Методы для работы с элементами главной страницы
 // Открыть сайт
     public final MainPage openSite() {
