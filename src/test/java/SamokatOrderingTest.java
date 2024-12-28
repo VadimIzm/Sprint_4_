@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import ru.page.objects.MainPage;
 import ru.page.objects.OrderPage;
 import ru.page.objects.RentPage;

@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -15,10 +16,11 @@ public class CommonBaseTest {
     @Before
     public void setUp() {
         //Закомментировать нужное - Chrome или Firefox
-        //ChromeOptions options = new ChromeOptions();
-        //driver = new ChromeDriver(options);
-        FirefoxOptions options = new FirefoxOptions();
-        driver = new FirefoxDriver(options);
+        ChromeOptions options = new ChromeOptions();
+        driver = new ChromeDriver(options);
+
+        //FirefoxOptions options = new FirefoxOptions();
+        //driver = new FirefoxDriver(options);
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
